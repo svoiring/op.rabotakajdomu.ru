@@ -1,0 +1,249 @@
+-- MySQL dump 10.13  Distrib 5.5.44, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: op
+-- ------------------------------------------------------
+-- Server version	5.5.44-0+deb8u1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `op`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `op` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+
+USE `op`;
+
+--
+-- Table structure for table `autouser`
+--
+
+DROP TABLE IF EXISTS `autouser`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `autouser` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fio` varchar(1000) COLLATE utf8_bin DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `login` varchar(500) COLLATE utf8_bin DEFAULT NULL,
+  `test_id` int(11) DEFAULT NULL,
+  `header_id` int(11) DEFAULT NULL,
+  `selected_id` int(11) DEFAULT NULL,
+  `questions_id` int(11) DEFAULT NULL,
+  `session_id` varchar(2000) COLLATE utf8_bin DEFAULT NULL,
+  `test_start_time` datetime DEFAULT NULL,
+  `valid` int(11) DEFAULT NULL,
+  `key` int(11) DEFAULT NULL,
+  `custom_text` text COLLATE utf8_bin,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `autouser`
+--
+
+LOCK TABLES `autouser` WRITE;
+/*!40000 ALTER TABLE `autouser` DISABLE KEYS */;
+INSERT INTO `autouser` VALUES (1,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9000,1,5,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(2,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9000,1,6,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(3,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9000,1,7,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(4,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9000,1,8,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(5,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9000,1,9,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(6,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,2,4,NULL,NULL,'2016-05-18 13:19:51',0,NULL,NULL),(7,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9004,19,23,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(8,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9004,19,24,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(9,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9004,19,25,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(10,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9004,19,26,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(11,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9004,19,27,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(12,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9005,23,NULL,NULL,'2016-05-18 13:19:51',0,NULL,NULL),(13,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9006,31,NULL,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(14,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,3,6,10,NULL,'2016-05-18 13:19:51',5,NULL,NULL),(15,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,3,6,14,NULL,'2016-05-18 13:19:51',5,NULL,NULL),(16,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9001,10,NULL,NULL,'2016-05-18 13:19:51',1,NULL,'Эмпирический'),(17,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9007,32,28,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(18,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9007,32,32,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(19,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9007,32,33,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(20,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9007,32,34,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(21,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9003,15,NULL,NULL,'2016-05-18 13:19:51',1,NULL,'Эмпирический'),(22,'Саша ','2016-05-18 13:20:55','2016-05-18 13:20:55',NULL,1,9002,12,NULL,NULL,'2016-05-18 13:19:51',0,NULL,'Целостность'),(23,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9000,1,5,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(24,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9000,1,6,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(25,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9000,1,7,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(26,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9000,1,8,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(27,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9000,1,9,NULL,'2016-05-18 13:19:51',4,NULL,NULL),(28,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,2,4,NULL,NULL,'2016-05-18 13:19:51',0,NULL,NULL),(29,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9004,19,23,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(30,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9004,19,24,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(31,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9004,19,25,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(32,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9004,19,26,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(33,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9004,19,27,NULL,'2016-05-18 13:19:51',3,NULL,NULL),(34,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9005,23,NULL,NULL,'2016-05-18 13:19:51',0,NULL,NULL),(35,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,9006,31,NULL,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(36,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,3,6,10,NULL,'2016-05-18 13:19:51',5,NULL,NULL),(37,'Саша ','2016-05-18 13:22:24','2016-05-18 13:22:24',NULL,1,3,6,14,NULL,'2016-05-18 13:19:51',5,NULL,NULL),(38,'Саша ','2016-05-18 13:22:25','2016-05-18 13:22:25',NULL,1,9001,10,NULL,NULL,'2016-05-18 13:19:51',1,NULL,'Эмпирический'),(39,'Саша ','2016-05-18 13:22:25','2016-05-18 13:22:25',NULL,1,9007,32,28,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(40,'Саша ','2016-05-18 13:22:25','2016-05-18 13:22:25',NULL,1,9007,32,32,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(41,'Саша ','2016-05-18 13:22:25','2016-05-18 13:22:25',NULL,1,9007,32,33,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(42,'Саша ','2016-05-18 13:22:25','2016-05-18 13:22:25',NULL,1,9007,32,34,NULL,'2016-05-18 13:19:51',1,NULL,NULL),(43,'Саша ','2016-05-18 13:22:25','2016-05-18 13:22:25',NULL,1,9003,15,NULL,NULL,'2016-05-18 13:19:51',1,NULL,'Эмпирический'),(44,'Саша ','2016-05-18 13:22:25','2016-05-18 13:22:25',NULL,1,9002,13,NULL,NULL,'2016-05-18 13:19:51',0,NULL,'Эмпирический');
+/*!40000 ALTER TABLE `autouser` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `header_questions`
+--
+
+DROP TABLE IF EXISTS `header_questions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `header_questions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `test_header_id` int(11) DEFAULT NULL,
+  `question_id` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `valid` int(11) DEFAULT NULL,
+  `order_index` int(11) DEFAULT NULL,
+  `header_select_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `header_questions`
+--
+
+LOCK TABLES `header_questions` WRITE;
+/*!40000 ALTER TABLE `header_questions` DISABLE KEYS */;
+INSERT INTO `header_questions` VALUES (1,9000,1,NULL,NULL,1,1,1),(2,9000,2,NULL,NULL,1,2,1),(3,9000,3,NULL,NULL,1,3,1),(4,9000,4,NULL,NULL,1,4,1),(5,9000,5,NULL,NULL,1,5,1),(6,9000,6,NULL,NULL,1,6,1),(7,9000,7,NULL,NULL,1,7,1),(8,9000,8,NULL,NULL,1,8,1),(9,9000,9,NULL,NULL,1,9,1),(10,2,1,NULL,NULL,NULL,1,NULL),(11,3,1,NULL,NULL,NULL,1,NULL),(12,3,8,NULL,NULL,NULL,2,NULL),(13,3,10,NULL,NULL,1,1,6),(14,3,11,NULL,NULL,1,2,6),(15,3,12,NULL,NULL,1,3,6),(16,3,13,NULL,NULL,1,4,6),(17,3,14,NULL,NULL,1,5,6),(18,9002,15,NULL,NULL,1,1,11),(19,9002,16,NULL,NULL,1,2,11),(20,9002,17,NULL,NULL,1,3,11),(21,9002,18,NULL,NULL,1,4,11),(22,9002,19,NULL,NULL,1,5,11),(23,9002,20,NULL,NULL,1,6,11),(24,9002,21,NULL,NULL,1,7,11),(25,9002,22,NULL,NULL,1,8,11),(26,9004,23,NULL,NULL,1,1,19),(27,9004,24,NULL,NULL,1,2,19),(28,9004,25,NULL,NULL,1,3,19),(29,9004,26,NULL,NULL,1,4,19),(30,9004,27,NULL,NULL,1,5,19),(33,9007,28,NULL,NULL,1,1,32),(34,9007,29,NULL,NULL,1,2,32),(35,9007,30,NULL,NULL,1,3,32),(36,9007,31,NULL,NULL,1,4,32),(37,9007,32,NULL,NULL,1,5,32),(38,9007,33,NULL,NULL,1,6,32),(39,9007,34,NULL,NULL,-900,7,32);
+/*!40000 ALTER TABLE `header_questions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `header_selected`
+--
+
+DROP TABLE IF EXISTS `header_selected`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `header_selected` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `test_header_id` int(11) DEFAULT NULL,
+  `name` varchar(4000) COLLATE utf8_bin DEFAULT NULL,
+  `valid` int(1) DEFAULT NULL,
+  `is_custom_text` int(1) DEFAULT NULL,
+  `order_index` int(11) DEFAULT NULL,
+  `is_questions` int(1) DEFAULT '0',
+  `positive_text` text COLLATE utf8_bin,
+  `negative_text` text COLLATE utf8_bin,
+  `true_value` int(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `header_selected`
+--
+
+LOCK TABLES `header_selected` WRITE;
+/*!40000 ALTER TABLE `header_selected` DISABLE KEYS */;
+INSERT INTO `header_selected` VALUES (1,NULL,NULL,9000,'Отметьте галочками из предложенных вариантов ответа',4,NULL,1,1,'Отмечено больше 4 пунктов, ответ верный, но не полный','отмечено больше менее 4х пунктов',4),(2,NULL,NULL,9000,'Все перечисленные в пункте 1 документы  и процедуры нужны!  ',1,NULL,2,0,NULL,NULL,1),(3,NULL,NULL,9000,'Составьте свой перечень обязательных документов и процедур  ',0,1,3,0,NULL,NULL,-1),(4,NULL,NULL,2,'7 дней  ',0,NULL,1,0,NULL,'любители дедлайнов берут первых попавшихся',-1),(5,NULL,NULL,2,'30 дней ',1,NULL,2,0,'естественная норма при соблюдении технологии подбора',NULL,1),(6,NULL,NULL,3,'Выберете варианты',5,NULL,1,1,'Правильный ответ подбирать инструменты для оценки нужно по всем пунктам ','Правильный ответ подбирать инструменты для оценки нужно по всем пунктам ',5),(7,NULL,NULL,9000,'Эти процедуры и документы чистой воды  бюрократия и симуляция деятельности',0,NULL,4,0,NULL,NULL,-1),(8,NULL,NULL,2,'Полгода ',0,NULL,3,0,NULL,'бессистемный бред рекрутера, который не работает или любой другой саботаж',-1),(9,NULL,NULL,2,'всегда по-разному ',0,NULL,4,0,NULL,'отсутствие навыков планирования, нарушение бизнес-процессов, вопросы с эффективности управленческой команды',NULL),(10,NULL,NULL,9001,'Напишите список',1,1,1,0,NULL,NULL,1),(11,NULL,NULL,9002,'Выберете из вариантов',3,NULL,1,1,NULL,NULL,3),(12,NULL,NULL,9002,'Свой вариант',0,1,3,0,NULL,NULL,-1),(13,NULL,NULL,9002,'Все перечисленные из а.)',0,NULL,2,0,NULL,NULL,-1),(14,NULL,NULL,9003,'Это один и тот же метод ',0,NULL,1,0,NULL,NULL,-1),(15,NULL,NULL,9003,'СПИ - это строго регламентированный  перечень вопросов, интервью состоит из нескольких блоков, проводится «один на один» имеет заранее заготовленную интерпретацию и шкалу оценок, чаще применяется для выбора единственного кандидата из нескольких финальных ',1,NULL,2,0,'правильное описание',NULL,1),(16,NULL,NULL,9003,'ПИК – это лингвистический анализ речи и метапрограмм соискателя в соотношении с профилем должности, на которую производится оценка ',1,NULL,3,0,NULL,NULL,1),(17,NULL,NULL,9003,'Впервые слышу о таких методах оценки ',0,NULL,4,0,NULL,NULL,-1),(18,NULL,NULL,9003,'Свой вариант',0,1,5,0,NULL,NULL,-1),(19,NULL,NULL,9004,'Отметьте галочками обязательные пункты',3,NULL,1,1,NULL,NULL,3),(20,NULL,NULL,9004,'Все пункты варианта А верны, но возможна гибкость и изменение последовательности подачи информации в зависимости от вербальных сигналов от соискателя , например слышно, что ему не удобно говорить и мы сокращаем по ситуации',1,NULL,2,0,NULL,NULL,1),(21,NULL,NULL,9004,'Я делаю принципиально по-другому,  в окне комментариев укажу свой вариант ',0,1,3,0,NULL,NULL,-1),(22,NULL,NULL,9004,'Скрипты не работают, все это книжная теория. Реально людей берут по знакомству ',0,NULL,4,0,NULL,NULL,-1),(23,NULL,NULL,9005,'с 10.00 до 12.00 ',0,NULL,1,0,NULL,NULL,-1),(24,NULL,NULL,9005,'с  16.00 до 18.00, ',0,NULL,2,0,NULL,NULL,-1),(25,NULL,NULL,9005,'обеденное или с 19.00 до 20.00, ',0,NULL,3,0,NULL,NULL,-1),(26,NULL,NULL,9005,'Понятие «идеальное  время звонка»  индивидуально, но оно есть! Время зависит от уровня  вакансии, графика и типа занятости кандидата,',1,NULL,4,0,NULL,NULL,1),(27,NULL,NULL,9005,'Идеальное –  это  время,  которое  указал кандидат  ',0,NULL,NULL,0,NULL,NULL,-1),(28,NULL,NULL,9006,'Договориться о выходе на работу ',0,NULL,NULL,0,NULL,NULL,-1),(29,NULL,NULL,9006,'Создание благоприятного впечатления о себе и своей',0,NULL,NULL,0,NULL,NULL,-1),(31,NULL,NULL,9006,'Достижение договоренности о дальнейшем взаимодействии',1,NULL,NULL,0,NULL,NULL,1),(32,NULL,NULL,9007,'Выберете варианты',1,NULL,1,1,NULL,NULL,1);
+/*!40000 ALTER TABLE `header_selected` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `questions`
+--
+
+DROP TABLE IF EXISTS `questions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `questions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(4000) COLLATE utf8_bin DEFAULT NULL,
+  `code` int(11) DEFAULT NULL,
+  `valid` int(1) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `order_index` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `questions`
+--
+
+LOCK TABLES `questions` WRITE;
+/*!40000 ALTER TABLE `questions` DISABLE KEYS */;
+INSERT INTO `questions` VALUES (1,'Заявка на подбор (название должности, график работы… обязательные, вводные данные)',100,1,NULL,NULL,1),(2,'Функциональный профиль  (действия/обязанность - критерии оценки результата – периодичность выполняемой функции) ',100,1,NULL,NULL,2),(3,'Личностный профиль (качества, способности, навыки, мотивация)',100,1,NULL,NULL,3),(4,'Шаблон вакансии для публикации',100,1,NULL,NULL,4),(5,'Шаблон для регистрации данных о соискателях в базу данных ',100,1,NULL,NULL,5),(6,'Лист обзвона соискателей',100,1,NULL,NULL,6),(7,'График собеседования',100,1,NULL,NULL,7),(8,'Психологический портрет, форма представления   на финальных кандидатов',100,1,NULL,NULL,8),(9,'Форма для сбора рекомендаций ',100,1,NULL,NULL,9),(10,'Прикладные знания и навыки (ПК; языки; законодательство и т.д.)',101,1,NULL,NULL,1),(11,'Способности и умения для развития в должности (внимательность, уровень интеллекта, аналитические способности и т.д.)',101,1,NULL,NULL,2),(12,'Мотивацию (удовлетворенность потребностей,  особенности мышления, мотивационный вектор (Я/ТЫ/ДЕЛО/ПРОЦЕСС/РЕЗУЛЬТАТ/ГЛОБАЛЬНОСТЬ/ДЕТАЛЬНОСТЬ/СТРЕМЛЕНИЕ/ИЗБЕГАНИЕ/ПРОЦЕДУРЫ/ВОЗМОЖНОСТИ )',101,1,NULL,NULL,3),(13,'Социальные характеристики (пол, возраст, семейное положение, образование, готовность к командировкам, где проживает)',101,1,NULL,NULL,4),(14,'Индивидуальные психологические особенности (тип темперамента, командные роди, IQ, EQ, и т.д.)',101,1,NULL,NULL,5),(15,'Подбор и оценка кандидатов, сотрудников',103,1,NULL,NULL,1),(16,'Адаптация на рабочем месте',103,1,NULL,NULL,2),(17,'Развитие и обучение',103,1,NULL,NULL,3),(18,'Мотивация',103,1,NULL,NULL,4),(19,'Кадровый документооборот',103,1,NULL,NULL,5),(20,'Аттестация персонала  ',103,1,NULL,NULL,6),(23,'Обратиться к соискателю назвав ФИО указанные в резюме, получить подтверждение, что говорите именно с этим человеком: «Добрый _____ могу я поговорить ФИО',104,1,NULL,NULL,1),(24,'Представить себя и компанию: «Меня зовут Иванов Иван, менеджер по персоналу Компании «Ресурсы Роста»',104,1,NULL,NULL,2),(25,'Указать откуда у вас есть данные о кандидате: «Вас рекомендовали…  Вы отправляли  резюме на вакансию… Мы узнали о вас, как о специалисте на сайте www….»',104,1,NULL,NULL,3),(26,'Рассматриваете ли Вы предложения о работе? ',104,1,NULL,NULL,4),(27,'Удобно ли Вам уделить мне 15 мин своего времени?',104,1,NULL,NULL,5),(28,'Исключают социально желательные ответы',105,1,NULL,NULL,1),(29,'Виден саботаж и провокации при тестировании',105,1,NULL,NULL,2),(30,'Требуют высокой квалификации в обработке данных от менеджера по персоналу',105,1,NULL,NULL,3),(31,'Трудоемко обработать и подготовить данные для заключения ',105,1,NULL,NULL,4),(32,'Могут вызывать недоумение у соискателей',105,1,NULL,NULL,5),(33,'Требуют высокой коммуникативной компетенции от менеджера по персоналу для того, чтобы презентовать соискателю важность, нужность и полезность проективного исследовани',105,1,NULL,NULL,6),(34,'Требуют базового психологического образования ',105,-900,NULL,NULL,7);
+/*!40000 ALTER TABLE `questions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `test_headers`
+--
+
+DROP TABLE IF EXISTS `test_headers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `test_headers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `test_id` int(11) DEFAULT NULL,
+  `name` varchar(4000) COLLATE utf8_bin DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `valid` int(9) DEFAULT NULL COMMENT 'Кол-во правильных ответов',
+  `order_index` int(11) DEFAULT NULL,
+  `action_desc` varchar(4000) COLLATE utf8_bin DEFAULT NULL,
+  `postive_text` text COLLATE utf8_bin,
+  `negative_text` text COLLATE utf8_bin,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9008 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `test_headers`
+--
+
+LOCK TABLES `test_headers` WRITE;
+/*!40000 ALTER TABLE `test_headers` DISABLE KEYS */;
+INSERT INTO `test_headers` VALUES (2,1,'Сколько в среднем нужно планировать времени на закрытие вакансии?',NULL,NULL,0,2,NULL,NULL,NULL),(3,1,'Какие блоки нужно оценивать на соответствие между кандидатом и должностью?',NULL,NULL,0,6,NULL,NULL,NULL),(9000,1,'Выберете документы и процедуры,  обязательные при закрытии вакансий  внутри компании.',NULL,NULL,1,1,NULL,NULL,NULL),(9001,1,'Какие проективные методики исследования личности Вы знаете, используете?',NULL,NULL,0,7,NULL,NULL,NULL),(9002,1,'Выберите зоны ответственности менеджера по персоналу малого предприятия с численностью персонала до 150 человек:',NULL,NULL,0,10,NULL,NULL,NULL),(9003,1,'Чем «структурированное поведенческое интервью» отличается от «проективного интервью по компетенциям» от Светланы Ивановой?',NULL,NULL,0,9,NULL,NULL,NULL),(9004,1,'Что должно содержаться в этапе установления контакта с соискателем во время обзвона.',NULL,NULL,0,3,NULL,NULL,NULL),(9005,1,'Идеальное время для обзвона  кандидатов – это:',NULL,NULL,0,4,NULL,NULL,NULL),(9006,1,'Цель первого телефонного разговора с потенциальным соискателем:',NULL,NULL,0,5,NULL,NULL,NULL),(9007,1,'Выберите плюсы и минусы использования проективных методик с которыми вы согласны:',NULL,NULL,0,8,NULL,NULL,NULL);
+/*!40000 ALTER TABLE `test_headers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `test_log`
+--
+
+DROP TABLE IF EXISTS `test_log`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `test_log` (
+  `int` int(11) NOT NULL AUTO_INCREMENT,
+  `quest_id` int(11) DEFAULT NULL,
+  `valid` int(11) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `autouser_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`int`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `test_log`
+--
+
+LOCK TABLES `test_log` WRITE;
+/*!40000 ALTER TABLE `test_log` DISABLE KEYS */;
+/*!40000 ALTER TABLE `test_log` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tests`
+--
+
+DROP TABLE IF EXISTS `tests`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tests` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(4000) COLLATE utf8_bin DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tests`
+--
+
+LOCK TABLES `tests` WRITE;
+/*!40000 ALTER TABLE `tests` DISABLE KEYS */;
+INSERT INTO `tests` VALUES (1,'ТЕСТ МЕНЕДЖЕРА ПО ПЕРСОНАЛУ',NULL,NULL),(2,'Тест HR',NULL,NULL);
+/*!40000 ALTER TABLE `tests` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-05-18 16:23:14
